@@ -1,5 +1,5 @@
 const MainLayout = () => {
-  return <div className="border-2 border-red-500">
+  return <div className="">
     main layout
   </div>;
 };
