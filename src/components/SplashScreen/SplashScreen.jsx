@@ -7,13 +7,10 @@ const SplashScreen = ({ onFinish }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // بعد از 3 ثانیه متن و حباب چت نمایش داده شود
     const textTimer = setTimeout(() => setShowText(true), 3000);
 
-    // بعد از 6 ثانیه، شروع fade-out
     const fadeTimer = setTimeout(() => setFadeOut(true), 6000);
 
-    // بعد از 6.8 ثانیه، SplashScreen بسته شود و برویم MainLayout
     const finishTimer = setTimeout(() => onFinish(), 6800);
 
     return () => {
@@ -33,7 +30,6 @@ const SplashScreen = ({ onFinish }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* لوگو */}
           <motion.div
             initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
             animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
@@ -42,7 +38,6 @@ const SplashScreen = ({ onFinish }) => {
             <img src={logo} alt="logo" />
           </motion.div>
 
-          {/* حباب چت با متن */}
           <AnimatePresence>
             {showText && (
               <motion.div
@@ -62,7 +57,6 @@ const SplashScreen = ({ onFinish }) => {
             )}
           </AnimatePresence>
 
-          {/* نسخه برنامه */}
           <motion.p
             className="mt-8 text-sm text-blue-500"
             initial={{ opacity: 0 }}
