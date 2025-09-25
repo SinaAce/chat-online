@@ -63,7 +63,7 @@ const SplashScreen = ({ onFinish }) => {
             animate={{ opacity: showText ? 1 : 0 }}
             transition={{ duration: 0.8 }}
           >
-            Version 2.1.0
+            Version 1.0
           </motion.p>
         </motion.div>
       )}

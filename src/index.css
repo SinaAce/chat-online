@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 .center-flex {
-  @apply flex justify-center items-start;
+  @apply flex justify-center items-center;
+}
+.center-flex-col {
+  @apply flex justify-center items-center flex-col;
 }
